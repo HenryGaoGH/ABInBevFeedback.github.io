@@ -3,68 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Welcome To QingDao JBInfo Inc Feedback Page</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="./logic.js"></script>
+    <style type="text/css" rel="styleSheet" href="./index.css"></style>
 </head>
 <body>
-    <div class="form-table">
-        <div class="form-textbox  is-error">
-            <input type="text" class="form-textbox-input" id="customer_name" name="customer_name" aria-labelledby="customer_name_label" maxlength="50" data-validate="name required">
-            <span class="form-textbox-label" id="customer_name_label" aria-hidden="true">姓名*</span>
-            <div class="form-message-wrapper" id="customer_name_error">
-                <span class="visuallyhidden">错误：</span>
-                <span class="form-message">输入你的姓名。</span>
+    <h1> Welcome To QingDao JBInfo Inc Feedback Page </h1>
+    <div style="display: flex; flex-direction: column;justify-content: center;align-items:center;">
+        <form action="" method="post">
+            <div>
+                <h3>提交人员</h3>
+                <input type="text" name="input" id="input">
             </div>
-        </div>
-        <div class="form-textbox ">
-            <input type="text" class="form-textbox-input" id="customer_email" name="customer_email" aria-labelledby="customer_email_label" maxlength="50" data-validate="email required">
-            <span class="form-textbox-label" id="customer_email_label" aria-hidden="true">邮箱地址*</span>
-            <div class="form-message-wrapper" id="customer_email_error">
-                <span class="visuallyhidden">错误：</span>
-                <span class="form-message">输入有效的邮箱地址。</span>
+            <div>
+                <h3>工厂</h3>
+                <input type="text" name="" id="">
             </div>
-        </div>
-        <div class="form-textbox ">
-            <input type="text" class="form-textbox-input" id="subject" name="subject" aria-labelledby="subject_label" maxlength="250" data-validate="subject required">
-            <span class="form-textbox-label" id="subject_label" aria-hidden="true">主题*</span>
-            <div class="form-message-wrapper" id="subject_error">
-                <span class="visuallyhidden">错误：</span>
-                <span class="form-message">输入一个主题。</span>
+            <div>
+                <h3>问题账号</h3>
+                <input type="text" name="" id="">
             </div>
-        </div>
-        <div class="form-textbox ">
-            <input type="text" class="form-textbox-input" id="url" name="url" aria-labelledby="url_label" maxlength="250" data-validate="url required">
-            <span class="form-textbox-label" id="url_label" aria-hidden="true">网页或网址*</span>
-            <div class="form-message-wrapper" id="url_error">
-                <span class="visuallyhidden">错误：</span>
-                <span class="form-message">输入一个网页或网址。</span>
+            <div>
+                <h3>问题描述</h3>
+                <textarea name="" id="" cols="30" rows="10"> </textarea>
             </div>
-        </div>
-        <div class="form-textbox">
-            <div class="form-textarea">
-                <textarea id="feedback_comment" name="feedback_comment" aria-labelledby="feedback_comment_label" maxlength="800" data-validate="feedback_comment required"></textarea>
+            <div>
+                <h3>附件(* 可以上传录制的视频或者图片)</h3>
+                <input type="file" name="" id="" accept=".png,.jpeg,.jpg,.gif" multiple="multiple">
             </div>
-            <span class="form-textbox-label" id="feedback_comment_label" aria-hidden="true">意见*</span>
-            <div class="form-message-wrapper" id="feedback_comment_error">
-                <span class="visuallyhidden">错误：</span>
-                <span class="form-message">输入意见信息。</span>
-            </div>
-        </div>
-        <div class="form-submit-policy row unsolicited_idea_submission_policy">
-            <div class="policy column large-12">
-                <div class="form-checkbox">
-                    <input type="checkbox" class="form-checkbox-input" id="unsolicited_idea_submission_policy" name="unsolicited_idea_submission_policy" value="yes" data-validate="checkbox required" data-checkbox="devices">
-                    <label class="form-label" for="unsolicited_idea_submission_policy"><span class="form-checkbox-indicator"></span><p>在你发送反馈之前，请先阅读 Apple 主动提交想法的相关<a href="https://www.apple.com/legal/policies/ideas.html">政策</a>。</p>
-                </label>
-                </div>
-                <div class="form-message-wrapper" id="unsolicited_idea_submission_policy_error">
-                    <span class="visuallyhidden">错误：</span>
-                    <span class="form-message">请阅读内容提交政策并勾选复选框。</span>
+            <div>
+                <h3>是否需要及时反馈(* 需要及时反馈的话修改完成会邮件发送给提交人)</h3>
+                <div style="display: flex;flex-direction: row;align-content: center;">
+                    <input type="checkbox" name="" id="input_checkbox" onchange=checkboxClick()>
+                    <div id="input_email" style="padding-left: 20px; display:none;">
+                        反馈人员邮件:<input type="email" name="" >
+                    </div>
                 </div>
             </div>
-            <div class="submit-button column large-12">
-                <button class="button form-button" type="submit" name="submit">提交反馈</button>
-            </div>
-        </div>
+
+            <input type="submit" value="提交" >
+        </form>
     </div>
 </body>
 </html>
